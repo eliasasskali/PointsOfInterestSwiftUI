@@ -42,7 +42,6 @@ class POIListInteractor {
         }.resume()
         
         group.notify(queue: .main) {
-            print(self.pointsOfInterestResults?.count ?? 0)
             self.presenter?.poiListFetched(poiList: self.pointsOfInterestResults ?? [])
         }
     }

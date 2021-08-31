@@ -15,21 +15,28 @@ struct POIListView: View {
         VStack {
             SearchBarView(text: $searchText)
                 .padding([.top])
+                .zIndex(1.0)
             List {
                 ForEach(store.pointsOfInterestResults
                             .filter({searchText.isEmpty
                                         ? true
                                         : $0.title.contains(searchText)}), id: \.id) { poi in
                     self.store.linkBuilder(for: poi.id) {
-                        HStack {
-                            Image(systemName: "location")
-                            Text(poi.title)
-                        }
+                        POIRow(title: poi.title)
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Points Of Interest"), displayMode: .inline)
+        }
+    }
+}
+
+struct POIRow: View {
+    var title: String
+    var body: some View {
+        HStack {
+            Image(systemName: "location")
+            Text(title)
         }
     }
 }
