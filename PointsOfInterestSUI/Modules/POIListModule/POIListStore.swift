@@ -18,7 +18,6 @@ class POIListStore: ObservableObject {
     }
     
     func poiResultsFetched(poiList: [POITuple]) {
-        print("Store -> view")
         DispatchQueue.main.async {
             self.pointsOfInterestResults = poiList
         }

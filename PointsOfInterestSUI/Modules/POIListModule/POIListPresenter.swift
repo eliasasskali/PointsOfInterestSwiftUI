@@ -30,7 +30,6 @@ extension POIListPresenter: POIListPresenterInterface {
     }
     
     func poiListFetched(poiList: [POITuple]) {
-        print("PoiListFetched")
         delegate?.poiResultsFetched(poiList: poiList)
     }
     
