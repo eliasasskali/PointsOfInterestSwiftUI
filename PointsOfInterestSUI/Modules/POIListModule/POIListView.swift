@@ -16,7 +16,7 @@ struct POIListView: View {
             SearchBarView(text: $searchText)
                 .padding([.top])
             List {
-                ForEach (store.pointsOfInterestResults
+                ForEach(store.pointsOfInterestResults
                             .filter({searchText.isEmpty
                                         ? true
                                         : $0.title.contains(searchText)}), id: \.id) { poi in
@@ -30,9 +30,6 @@ struct POIListView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Points Of Interest"), displayMode: .inline)
-            .onAppear {
-                store.fetchPOIList()
-            }
         }
     }
 }

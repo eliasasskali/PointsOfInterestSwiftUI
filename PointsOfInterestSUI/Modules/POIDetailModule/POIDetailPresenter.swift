@@ -17,8 +17,9 @@ class POIDetailPresenter {
         self.router = router
     }
     
-    func setup(delegate: POIDetailStore) {
+    func setup(delegate: POIDetailStore, id: Int) {
         self.delegate = delegate
+        self.fetchPOI(with: id)
     }
 }
 

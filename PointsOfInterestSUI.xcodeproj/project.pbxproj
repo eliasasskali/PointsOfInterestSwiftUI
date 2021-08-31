@@ -13,10 +13,10 @@
 		1B0451F226C66D7300628D07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0451F126C66D7300628D07 /* Preview Assets.xcassets */; };
 		1B0451F526C66D7300628D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0451F326C66D7300628D07 /* LaunchScreen.storyboard */; };
 		1B0451FF26C66E1D00628D07 /* PointOfInterestDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0451FE26C66E1D00628D07 /* PointOfInterestDB.swift */; };
-		1B04520126C66E2F00628D07 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04520026C66E2F00628D07 /* PointOfInterest.swift */; };
+		1B04520126C66E2F00628D07 /* POIDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04520026C66E2F00628D07 /* POIDetailEntity.swift */; };
 		1B04520326C66E4600628D07 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04520226C66E4600628D07 /* SearchBarView.swift */; };
 		1B04520C26CA48C300628D07 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B04520B26CA48C300628D07 /* MapView.swift */; };
-		1B39106E26DE0D61009DBC91 /* POITuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39106D26DE0D61009DBC91 /* POITuple.swift */; };
+		1B39106E26DE0D61009DBC91 /* POIListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B39106D26DE0D61009DBC91 /* POIListEntity.swift */; };
 		1B84EC6B26D7A60700377554 /* POIDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC6A26D7A60700377554 /* POIDetailBuilder.swift */; };
 		1B84EC6F26D7A62B00377554 /* POIDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC6E26D7A62B00377554 /* POIDetailProtocols.swift */; };
 		1B84EC7926D7A75B00377554 /* POIDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B84EC7826D7A75B00377554 /* POIDetailPresenter.swift */; };
@@ -43,10 +43,10 @@
 		1B0451F426C66D7300628D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0451F626C66D7300628D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B0451FE26C66E1D00628D07 /* PointOfInterestDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestDB.swift; sourceTree = "<group>"; };
-		1B04520026C66E2F00628D07 /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		1B04520026C66E2F00628D07 /* POIDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailEntity.swift; sourceTree = "<group>"; };
 		1B04520226C66E4600628D07 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		1B04520B26CA48C300628D07 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		1B39106D26DE0D61009DBC91 /* POITuple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITuple.swift; sourceTree = "<group>"; };
+		1B39106D26DE0D61009DBC91 /* POIListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIListEntity.swift; sourceTree = "<group>"; };
 		1B84EC6A26D7A60700377554 /* POIDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailBuilder.swift; sourceTree = "<group>"; };
 		1B84EC6E26D7A62B00377554 /* POIDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailProtocols.swift; sourceTree = "<group>"; };
 		1B84EC7826D7A75B00377554 /* POIDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIDetailPresenter.swift; sourceTree = "<group>"; };
@@ -133,8 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				1B0451FE26C66E1D00628D07 /* PointOfInterestDB.swift */,
-				1B04520026C66E2F00628D07 /* PointOfInterest.swift */,
-				1B39106D26DE0D61009DBC91 /* POITuple.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +156,7 @@
 				1B84EC9D26DCD86A00377554 /* POIDetailInteractor.swift */,
 				1B84EC7826D7A75B00377554 /* POIDetailPresenter.swift */,
 				1B84EC9926DCD69400377554 /* POIDetailRouter.swift */,
+				1B04520026C66E2F00628D07 /* POIDetailEntity.swift */,
 			);
 			path = POIDetailModule;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 				1B84EC8D26DCCD4300377554 /* POIListInteractor.swift */,
 				1B84EC8B26DCCD3900377554 /* POIListPresenter.swift */,
 				1B84EC8F26DCCD4A00377554 /* POIListRouter.swift */,
+				1B39106D26DE0D61009DBC91 /* POIListEntity.swift */,
 			);
 			path = POIListModule;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 				1B84EC8E26DCCD4300377554 /* POIListInteractor.swift in Sources */,
 				1B84EC9626DCCD7700377554 /* POIListBuilder.swift in Sources */,
 				1B84EC9026DCCD4A00377554 /* POIListRouter.swift in Sources */,
-				1B04520126C66E2F00628D07 /* PointOfInterest.swift in Sources */,
-				1B39106E26DE0D61009DBC91 /* POITuple.swift in Sources */,
+				1B04520126C66E2F00628D07 /* POIDetailEntity.swift in Sources */,
+				1B39106E26DE0D61009DBC91 /* POIListEntity.swift in Sources */,
 				1B84EC9E26DCD86A00377554 /* POIDetailInteractor.swift in Sources */,
 				1B0451EB26C66D7100628D07 /* SceneDelegate.swift in Sources */,
 				1B84EC6F26D7A62B00377554 /* POIDetailProtocols.swift in Sources */,

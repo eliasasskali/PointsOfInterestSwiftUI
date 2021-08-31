@@ -48,9 +48,9 @@ struct POIDetailView: View {
             }
             .padding()
         }
-        .onAppear(perform: {
-            store.fetchPOI(with: self.pointOfInterestId)
-        })
+//        .onAppear(perform: {
+//            store.fetchPOI(with: self.pointOfInterestId)
+//        })
     }
 }
 

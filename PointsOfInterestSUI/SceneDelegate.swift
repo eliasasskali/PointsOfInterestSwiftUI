@@ -15,13 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        //RealmMigrator.setDefaultConfiguration()
-//        let router = POIListRouter()
-//        let contentView = router.associatedView()
-//        let nextController = UIHostingController(rootView: contentView)
-//        let navigationController = UINavigationController(rootViewController: nextController)
-//        router.rootViewController = nextController
-        
         let builder = POIListBuilder()
         let contentView = builder.createPOIListModule()
         let nextController = UIHostingController(rootView: contentView)
