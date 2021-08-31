@@ -15,15 +15,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        //RealmMigrator.setDefaultConfiguration()
+        let builder = POIListBuilder()
+        let contentView = builder.createPOIListModule()
+        let nextController = UIHostingController(rootView: contentView)
+        let navigationController = UINavigationController(rootViewController: nextController)
+        builder.rootViewController = nextController
         if let windowScene = scene as? UIWindowScene {
-            //let realm = try Realm()
             let window = UIWindow(windowScene: windowScene)
-            let contentView = ContentView()
-                .environmentObject(PointOfInterestStore())
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+                window.rootViewController = navigationController
+                self.window = window
+                window.makeKeyAndVisible()
         }
     }
     

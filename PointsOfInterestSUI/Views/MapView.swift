@@ -17,8 +17,11 @@ struct MapView: UIViewRepresentable {
         centerAndPinMapOnLocation(pointOfInterest: pointOfInterest, mapView: mapView)
         return mapView
     }
+    
     func updateUIView(_ view: MKMapView, context: Context) {
-        
+        DispatchQueue.main.async {
+            self.centerAndPinMapOnLocation(pointOfInterest: self.pointOfInterest, mapView: view)
+        }
     }
     
     func makeCoordinator() -> Coordinator {
