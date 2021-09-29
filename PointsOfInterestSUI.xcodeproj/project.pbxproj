@@ -155,8 +155,8 @@
 				1B84EC9726DCD54C00377554 /* POIDetailView.swift */,
 				1B84EC9D26DCD86A00377554 /* POIDetailInteractor.swift */,
 				1B84EC7826D7A75B00377554 /* POIDetailPresenter.swift */,
-				1B84EC9926DCD69400377554 /* POIDetailRouter.swift */,
 				1B04520026C66E2F00628D07 /* POIDetailEntity.swift */,
+				1B84EC9926DCD69400377554 /* POIDetailRouter.swift */,
 			);
 			path = POIDetailModule;
 			sourceTree = "<group>";
@@ -170,8 +170,8 @@
 				1B84EC9126DCCD5400377554 /* POIListView.swift */,
 				1B84EC8D26DCCD4300377554 /* POIListInteractor.swift */,
 				1B84EC8B26DCCD3900377554 /* POIListPresenter.swift */,
-				1B84EC8F26DCCD4A00377554 /* POIListRouter.swift */,
 				1B39106D26DE0D61009DBC91 /* POIListEntity.swift */,
+				1B84EC8F26DCCD4A00377554 /* POIListRouter.swift */,
 			);
 			path = POIListModule;
 			sourceTree = "<group>";
